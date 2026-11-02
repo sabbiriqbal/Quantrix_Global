@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service</title>
+<meta name="description" content="Terms of Service for the personal finance, expense, income and note management application with loan installment tracking.">
+<style>
+  :root{
+    --glass:rgba(255,255,255,.72); --glass-strong:rgba(255,255,255,.85);
+    --ink:#1E2534; --body:#3E4759; --muted:#6B7386;
+    --accent:#0284C7; --accent-2:#7C3AED; --accent-soft:rgba(2,132,199,.09);
+    --line:rgba(30,58,96,.14); --heading:#263150;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+       background:#EAF1F8 linear-gradient(150deg,#F3F7FC 0%,#E8EFF9 34%,#EEEBF7 66%,#F6F0F7 100%) fixed;
+       color:var(--ink);line-height:1.72;font-size:16px;min-height:100vh}
+  .page{max-width:790px;margin:0 auto;padding:54px 22px 80px}
+  header{position:relative;background:linear-gradient(120deg,#0E2A47 0%,#153E70 48%,#3B2270 100%);
+         color:#fff;border-radius:26px;padding:40px 38px 36px;margin-bottom:44px;text-align:center;overflow:hidden;
+         box-shadow:0 18px 44px rgba(14,42,71,.35)}
+  header::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-120px;bottom:-190px;
+         background:radial-gradient(circle,rgba(2,132,199,.35),transparent 68%)}
+  header::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-90px;top:-140px;
+         background:radial-gradient(circle,rgba(124,58,237,.4),transparent 68%)}
+  .kicker .chip,.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);
+         border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 15px;font-size:.74rem;
+         font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#BDE3FA;backdrop-filter:blur(8px)}
+  .kicker .chip::before,.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#7DD3FC;
+         box-shadow:0 0 9px rgba(125,211,252,.9)}
+  header .kicker{display:block;margin-bottom:14px}
+  header h1{position:relative;font-size:2.35rem;font-weight:850;letter-spacing:-.035em;line-height:1.1;color:#fff}
+  header p.sub{position:relative;margin:10px auto 0;max-width:520px;font-size:.92rem;color:#C7D5E8}
+  header .meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px;position:relative}
+  header .meta .chip{color:#E4D9FB;background:rgba(255,255,255,.09)}
+  .badge{display:none}
+  .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+                 box-shadow:0 0 8px rgba(2,132,199,.7)}
+  section{background:var(--glass);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:30px 32px;
+          margin-bottom:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+          box-shadow:0 10px 34px rgba(30,58,96,.08)}
+  h2{font-size:1.3rem;font-weight:800;margin:0 0 15px;letter-spacing:-.02em;color:#182033;
+     padding-bottom:12px;border-bottom:1px solid var(--line)}
+  h3{font-size:.99rem;font-weight:700;margin:24px 0 8px;color:var(--heading)}
+  p{margin:11px 0;color:var(--body)}
+  strong{color:var(--ink)}
+  ul,ol{margin:10px 0 10px 24px}
+  li{margin:8px 0;color:var(--body)}
+  li::marker{color:var(--accent-2)}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;font-size:.9rem;
+        border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th,td{padding:12px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:rgba(2,132,199,.08);color:#1B6FA3;font-weight:800;font-size:.76rem;
+     letter-spacing:.08em;text-transform:uppercase}
+  td{background:rgba(255,255,255,.65)}
+  tr:nth-child(even) td{background:#F3F7FC}
+  tr:last-child td{border-bottom:none}
+  .note{background:linear-gradient(135deg,#EAF6FE,#F1EDFC);border:1px solid rgba(2,132,199,.2);
+        border-left:4px solid var(--accent);border-radius:14px;padding:16px 20px;margin:18px 0}
+  .note p{margin:4px 0;color:#2B3A55}
+  .no{color:#0A7D4A;font-weight:700}
+  code{background:rgba(30,58,96,.07);border-radius:7px;padding:2px 8px;font-size:.86em;color:#2A4A66}
+  a{color:var(--accent);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(2,132,199,.35)}
+  a:hover{color:var(--accent-2);border-bottom-color:var(--accent-2)}
+  @media (max-width:600px){
+    .page{padding:30px 14px 56px}
+    header h1{font-size:1.7rem}
+    header{padding:26px 18px;border-radius:20px}
+    section{padding:22px 16px;border-radius:16px}
+    table{font-size:.79rem}
+    th,td{padding:9px 10px}
+    th{font-size:.68rem}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="kicker"><span class="chip">Legal Agreement</span></span>
+  <h1>Terms of Service</h1>
+  <p class="sub">The rules for using the app, subscriptions and your rights as a user.</p>
+  <div class="meta">
+    <span class="chip">Last updated: November 2, 2026</span>
+  </div>
+</header>
+
+<section>
+<h2>1. Agreement to These Terms</h2>
+<p>These Terms of Service ("Terms") form a legally binding agreement between you and the developer of the personal finance and note management application ("the App", "we", "us", "our") and govern your access to and use of the App and any related cloud services. By downloading, installing or using the App, or by subscribing to any plan, you confirm that you have read, understood and agree to be bound by these Terms and by our <a href="https://qistfinance-378e4.web.app/privacy-policy.html">Privacy Policy</a>.</p>
+<p>If you do not agree to these Terms, do not download or use the App.</p>
+<p>You must be at least 13 years old (or the minimum age of digital consent in your country) to use the App. If you use the App on behalf of an organisation, you confirm that you have authority to bind that organisation to these Terms.</p>
+</section>
+
+<section>
+<h2>2. What the App Does</h2>
+<p>The App is a personal finance, income and expense management and note-taking tool. It lets you record and organise your own financial information — accounts and balances, income, expenses and transfers, loan records and payments, budgets, recurring payment rules, notes, receipts, categories and related documents — on your device, with optional cloud sync and backup features.</p>
+<div class="note">
+<p><strong>Not a bank and not a financial service.</strong> The App does not hold, transmit, receive or process your money. It does not connect to your bank or any payment provider. It stores only the records you enter and the balances you define. Nothing in the App creates a custody, payment, credit, investment or banking relationship between you and us.</p>
+</div>
+</section>
+
+<section>
+<h2>3. Not Financial Advice</h2>
+<p>All content, calculations, statistics, charts, insights and outputs produced by the App — including the interest calculator, budget progress, summaries and any AI-generated text — are provided for <strong>information and record-keeping only</strong>. They do not constitute financial, legal, tax, accounting or investment advice, and they are not a recommendation to lend, borrow, invest or otherwise transact.</p>
+<p>You are solely responsible for your financial decisions and for any lending or borrowing you record in the App. We do not verify, intermediate or guarantee any transaction, loan or agreement between you and any other person or entity, including people or entities you record as stakeholders.</p>
+<p>Amounts, interest calculations and statistics in the App may differ from statements issued by your bank or by other parties; in such cases those parties' official records control.</p>
+</section>
+
+<section>
+<h2>4. Subscriptions and Purchases</h2>
+<p>The App offers a free tier and paid upgrade plans, processed exclusively through the Google Play Store:</p>
+<table>
+<tr><th>Plan</th><th>Type</th><th>Billing</th></tr>
+<tr><td>Free</td><td>No purchase</td><td>Basic income and expense tracking features at no charge.</td></tr>
+<tr><td>Premium (Offline Pro)</td><td>One-time, non-recurring purchase</td><td>A single charge that unlocks the Premium features for as long as we offer the App, with no recurring payment.</td></tr>
+<tr><td>Cloud</td><td>Auto-renewing monthly subscription with a 3-day free trial</td><td>Billed through your Google Play account at the price shown at purchase. The trial converts into a paid subscription unless cancelled before it ends.</td></tr>
+</table>
+<h3>4.1 Renewal and cancellation</h3>
+<ul>
+  <li>Subscriptions renew automatically each month at the then-current price unless cancelled at least 24 hours before the end of the current period.</li>
+  <li>You can cancel or change your subscription at any time in <strong>Google Play → Payments &amp; subscriptions → Subscriptions</strong>. Cancellation stops future billing; it does not refund the current period.</li>
+  <li>Prices may change; you will receive prior notice via Google Play where required, and changes apply only to future billing cycles.</li>
+</ul>
+<h3>4.2 Refunds</h3>
+<p>In-app purchases are processed by Google. Refund requests, disputes and chargebacks are handled under <strong>Google Play's refund policies</strong> and may be requested via Google Play. Refunds issued by Google will result in your Premium/Cloud entitlements being removed.</p>
+<h3>4.3 Trial terms</h3>
+<p>Free trials are available only to new subscribers of the applicable plan and only once. If you cancel during the trial, access to the plan's paid features ends immediately after the trial.</p>
+</section>
+
+<section>
+<h2>5. Your Data and Your Responsibility</h2>
+<ul>
+  <li><strong>You own your records.</strong> All financial records, notes and attachments you create belong to you.</li>
+  <li><strong>Backups are your safety net.</strong> Core records are stored on your device. You may enable optional cloud backup/sync for paid plans. Keep your own exports (CSV/Excel/JSON) and backups. <strong>We are not responsible for data loss caused by</strong> device loss, damage, or wipe, uninstall, operating-system failure, failed backups, or your failure to sync or export.</li>
+  <li><strong>Accurate entry.</strong> The App organises what you enter; we do not verify the accuracy of your records.</li>
+  <li><strong>Third-party data.</strong> If you record information about other people (stakeholders, borrowers or lenders), you confirm you have a lawful basis to do so and use it lawfully.</li>
+</ul>
+<p>How data is collected, stored and shared is described in our <a href="https://qistfinance-378e4.web.app/privacy-policy.html">Privacy Policy</a>.</p>
+</section>
+
+<section>
+<h2>6. Your Account</h2>
+<ul>
+  <li>Keep your sign-in information, One-Time Passwords (OTPs) and recovery details confidential and secure. Never share them.</li>
+  <li>You are responsible for all activity under your account.</li>
+  <li>One human or organisation per account; do not share accounts between people.</li>
+  <li>Notify us promptly at the contact in Section 15 about any unauthorised access.</li>
+  <li>Your local app-lock PIN and biometric protections are for your convenience; they do not replace your device's own security. We cannot recover your PIN, password or data if you lose your credentials.</li>
+</ul>
+</section>
+
+<section>
+<h2>7. Acceptable Use</h2>
+<p>You agree <strong>NOT</strong> to:</p>
+<ul>
+  <li>Use the App for any unlawful purpose, including money laundering, financing unlawful activities, tax evasion, fraud or harmful lending practices.</li>
+  <li>Record information you have no right to possess, or harass, threaten or defame any person whose details you enter.</li>
+  <li>Compile, scrape or harvest data from the App or its cloud services, or probe, scan or test the security of our systems.</li>
+  <li>Reverse-engineer, decompile or create derivative works of the App except where such restriction is prohibited by law.</li>
+  <li>Distribute malware or interfere with, disrupt, or attempt to gain unauthorised access to the App, other users' data, or related infrastructure.</li>
+  <li>Misrepresent the App as issuing, holding or transferring money, or use our name or marks to imply any partnership or endorsement.</li>
+</ul>
+</section>
+
+<section>
+<h2>8. Intellectual Property</h2>
+<p>The App — including its design, code, interface, icons, graphics and all related intellectual property — is owned by us or our licensors and is protected by copyright, trademark and other laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to install and use the App on devices you own or control, solely for your personal finance, expense and note management purposes, in accordance with these Terms and the Google Play Terms of Service. You retain all rights to the content you create in the App.</p>
+</section>
+
+<section>
+<h2>9. Third-Party Services</h2>
+<p>The App relies on third-party services for certain opt-in functionality — including Google account sign-in, Google Firebase cloud storage, Google Drive backup, Google ML Kit on-device processing, the Google Gemini API (only if you supply your own key) and Google Play Billing. Your use of those services is also governed by the relevant provider's terms and privacy policies. We are not responsible for third-party services or for their availability, changes or acts, except where prohibited by law.</p>
+</section>
+
+<section>
+<h2>10. Disclaimers</h2>
+<p>The App is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, express or implied, including implied warranties of merchantability, fitness for a particular purpose, accuracy, uninterrupted operation or non-infringement. We do not warrant that the App will be error-free, secure, available at all times, or that defects will be corrected. Optional online features depend on third-party infrastructure and may be unavailable without notice.</p>
+</section>
+
+<section>
+<h2>11. Limitation of Liability</h2>
+<p>To the maximum extent permitted by applicable law, our total aggregate liability to you for all claims arising out of or relating to the App or these Terms is <strong>limited to the amount you paid to us for the App in the 12 months before the claim arose</strong> (or, if you made no payment, zero).</p>
+<p>In no event will we be liable for any <strong>indirect, incidental, special, consequential or punitive damages</strong>, or for lost profits, lost data, lost savings, incorrect accounting, business interruption, or financial losses connected to loans, transactions or balances you record — even if we have been advised of the possibility of such damages.</p>
+<p>Some jurisdictions do not allow certain limitations, so parts of this Section may not apply to you where the law requires otherwise.</p>
+</section>
+
+<section>
+<h2>12. Indemnity</h2>
+<p>You agree to indemnify and hold us harmless from claims, damages, liabilities and reasonable legal costs arising from (a) your use of the App in breach of these Terms or applicable law, (b) records or content you enter, or (c) your transactions with stakeholders or third parties recorded in the App.</p>
+</section>
+
+<section>
+<h2>13. Changes, Suspension and Termination</h2>
+<ul>
+  <li><strong>Your rights:</strong> you may stop using the App and delete your account (with full data deletion) at any time from within the App.</li>
+  <li><strong>Our rights:</strong> we may modify, update or discontinue features, and may suspend or terminate your access if you seriously breach these Terms, abuse the service, or where required by law, with reasonable notice where practicable.</li>
+  <li><strong>Effect:</strong> upon termination, your licence to use the App ends. Records already stored on your device remain on your device; cloud data is handled as described in the Privacy Policy.</li>
+</ul>
+</section>
+
+<section>
+<h2>14. Changes to These Terms</h2>
+<p>We may update these Terms from time to time. The "Last updated" date above shows the current version. For material changes, we will also notify you inside the App where practical. Continued use of the App after changes take effect means you accept the revised Terms. If you do not accept them, stop using the App and delete your account.</p>
+</section>
+
+<section>
+<h2>15. Governing Law and Contact</h2>
+<p><strong>Governing law:</strong> These Terms are governed by the laws of the country in which the developer is resident, without regard to conflict-of-law rules. Mandatory consumer-protection rights in your country of residence are unaffected. Google Play users may have additional rights under the consumer laws of their country.</p>
+<p><strong>Contact:</strong> questions, disputes or notices about these Terms:</p>
+<p>Email: <a href="mailto:quantrixglobal@gmail.com?subject=Qist%20Finance%20Terms">quantrixglobal@gmail.com</a><br>
+Alternatively, use the "Email to Developer" option inside the App.</p>
+</section>
+
+
+</div>
+</body>
+</html>

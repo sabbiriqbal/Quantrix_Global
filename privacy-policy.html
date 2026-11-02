@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Qist Finance</title>
+<meta name="description" content="Privacy Policy for Qist Finance, the offline-first personal finance, expense, income and note management app with loan tracking.">
+<style>
+  :root{
+    --glass:rgba(255,255,255,.72); --glass-strong:rgba(255,255,255,.85);
+    --ink:#1E2534; --body:#3E4759; --muted:#6B7386;
+    --accent:#0284C7; --accent-2:#7C3AED; --accent-soft:rgba(2,132,199,.09);
+    --line:rgba(30,58,96,.14); --heading:#263150;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+       background:#EAF1F8 linear-gradient(150deg,#F3F7FC 0%,#E8EFF9 34%,#EEEBF7 66%,#F6F0F7 100%) fixed;
+       color:var(--ink);line-height:1.72;font-size:16px;min-height:100vh}
+  .page{max-width:790px;margin:0 auto;padding:54px 22px 80px}
+  header{position:relative;background:linear-gradient(120deg,#0E2A47 0%,#153E70 48%,#3B2270 100%);
+         color:#fff;border-radius:26px;padding:40px 38px 36px;margin-bottom:44px;text-align:center;overflow:hidden;
+         box-shadow:0 18px 44px rgba(14,42,71,.35)}
+  header::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-120px;bottom:-190px;
+         background:radial-gradient(circle,rgba(2,132,199,.35),transparent 68%)}
+  header::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-90px;top:-140px;
+         background:radial-gradient(circle,rgba(124,58,237,.4),transparent 68%)}
+  .kicker .chip,.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);
+         border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 15px;font-size:.74rem;
+         font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#BDE3FA;backdrop-filter:blur(8px)}
+  .kicker .chip::before,.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#7DD3FC;
+         box-shadow:0 0 9px rgba(125,211,252,.9)}
+  header .kicker{display:block;margin-bottom:14px}
+  header h1{position:relative;font-size:2.35rem;font-weight:850;letter-spacing:-.035em;line-height:1.1;color:#fff}
+  header p.sub{position:relative;margin:10px auto 0;max-width:520px;font-size:.92rem;color:#C7D5E8}
+  header .meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px;position:relative}
+  header .meta .chip{color:#E4D9FB;background:rgba(255,255,255,.09)}
+  .badge{display:none}
+  .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+                 box-shadow:0 0 8px rgba(2,132,199,.7)}
+  section{background:var(--glass);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:30px 32px;
+          margin-bottom:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+          box-shadow:0 10px 34px rgba(30,58,96,.08)}
+  h2{font-size:1.3rem;font-weight:800;margin:0 0 15px;letter-spacing:-.02em;color:#182033;
+     padding-bottom:12px;border-bottom:1px solid var(--line)}
+  h3{font-size:.99rem;font-weight:700;margin:24px 0 8px;color:var(--heading)}
+  p{margin:11px 0;color:var(--body)}
+  strong{color:var(--ink)}
+  ul,ol{margin:10px 0 10px 24px}
+  li{margin:8px 0;color:var(--body)}
+  li::marker{color:var(--accent-2)}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;font-size:.9rem;
+        border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th,td{padding:12px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:rgba(2,132,199,.08);color:#1B6FA3;font-weight:800;font-size:.76rem;
+     letter-spacing:.08em;text-transform:uppercase}
+  td{background:rgba(255,255,255,.65)}
+  tr:nth-child(even) td{background:#F3F7FC}
+  tr:last-child td{border-bottom:none}
+  .note{background:linear-gradient(135deg,#EAF6FE,#F1EDFC);border:1px solid rgba(2,132,199,.2);
+        border-left:4px solid var(--accent);border-radius:14px;padding:16px 20px;margin:18px 0}
+  .note p{margin:4px 0;color:#2B3A55}
+  .no{color:#0A7D4A;font-weight:700}
+  code{background:rgba(30,58,96,.07);border-radius:7px;padding:2px 8px;font-size:.86em;color:#2A4A66}
+  a{color:var(--accent);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(2,132,199,.35)}
+  a:hover{color:var(--accent-2);border-bottom-color:var(--accent-2)}
+  @media (max-width:600px){
+    .page{padding:30px 14px 56px}
+    header h1{font-size:1.7rem}
+    header{padding:26px 18px;border-radius:20px}
+    section{padding:22px 16px;border-radius:16px}
+    table{font-size:.79rem}
+    th,td{padding:9px 10px}
+    th{font-size:.68rem}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="kicker"><span class="chip">Legal Information</span></span>
+  <h1>Privacy Policy</h1>
+  <p class="sub">How your personal finance, expense and note data is collected, stored and protected.</p>
+  <div class="meta">
+    <span class="chip">Last updated: November 2, 2026</span>
+  </div>
+</header>
+
+<section>
+<h2>1. Overview</h2>
+<p>This Privacy Policy explains how <strong>Qist Finance</strong> ("we", "us", "our", the "App") handles your information when you use our mobile application. Qist Finance is a personal finance, expense and income management and note application that lets you record accounts and balances, income, expenses and transfers, loan records, budgets, recurring payments, notes, receipts and related financial records.</p>
+<div class="note">
+<p><strong>The core design principle of Qist Finance is privacy:</strong> your financial records are stored in a local database on your device. Cloud synchronization, cloud backups and any transfer of your data to our servers happen <strong>only if you enable them</strong> (e.g. by using a Cloud subscription plan), and you can turn cloud storage off at any time.</p>
+</div>
+<p>By using Qist Finance you agree to this Privacy Policy. If you do not agree, please do not use the App.</p>
+<p>We do <strong>not</strong> offer our service to compile profiles about you, and we never sell your personal data to anyone.</p>
+</section>
+
+<section>
+<h2>2. Information We Collect</h2>
+
+<h3>2.1 Account and profile information</h3>
+<p>When you register for a Qist Finance account, we collect the information you provide:</p>
+<ul>
+  <li><strong>Email address</strong> — used as your sign-in identifier, for email verification and one-time-password (OTP) emails.</li>
+  <li><strong>Full name and username</strong> — used to identify your account and display your name in the App.</li>
+  <li><strong>Password</strong> — used only for authentication. It is stored exclusively in Firebase Authentication (Google) and is <strong>never</strong> stored in our application database.</li>
+  <li><strong>Mobile number (optional)</strong> — collected if you choose to add it to your profile.</li>
+  <li><strong>Residential or business address (optional)</strong> — collected only if you choose to complete your profile with it.</li>
+  <li><strong>Profile photo (optional)</strong> — if you upload one and cloud features are enabled, it is stored in Firebase Storage.</li>
+  <li><strong>Subscription status</strong> — your subscription tier and its update timestamp, stored with your profile.</li>
+</ul>
+
+<h3>2.2 Financial and money-management data</h3>
+<p>To do its job, the App stores the records you create. Depending on which features you use, this may include:</p>
+<ul>
+  <li><strong>Accounts and wallets</strong> — account name, type (bank, cash, mobile financial services, savings, investments, other), balance, initial balance, a color/icon you pick for the card, currency, and an account number only if you type one in.</li>
+  <li><strong>Transactions</strong> — amount, date, type (income/expense/transfer), description/note, category, tags, source and destination accounts, and receipt images you attach.</li>
+  <li><strong>Loans</strong> — the party's name, amount lent or borrowed, interest rate and interest amount, duration, settlement date, source account and loan payment history. The App only records and manages this information.</li>
+  <li><strong>Recurring payments</strong> — rules you define (amount, frequency, start/end dates, accounts, auto-execution preference).</li>
+  <li><strong>Budgets</strong> — category spending limits and date ranges.</li>
+  <li><strong>Cost heads and categories</strong> — names, descriptions, colors and icons you create.</li>
+  <li><strong>Stakeholders / projects (optional)</strong> — a person's or entity's name, phone, email, address, photo and amount due, only for the details you choose to record about people or businesses you deal with.</li>
+  <li><strong>Notes and tasks</strong> — note titles, content, checklists, reminders, colors and attachments.</li>
+  <li><strong>In-app notifications and reminders</strong> — a local history of due, upcoming and overdue alerts the App generates for you.</li>
+</ul>
+
+<h3>2.3 Data we do <span class="no">NOT</span> collect</h3>
+<ul>
+  <li class="no"><span class="no">No advertising identifiers, no advertising SDKs, and we show no ads.</span></li>
+  <li><strong>No analytics or telemetry</strong> — the App contains no analytics, crash-reporting or tracking SDK. We do not track your usage of the App.</li>
+  <li><strong>No push-notification tokens</strong> — all notifications in Qist Finance are generated locally on your device. We operate no push notification system.</li>
+  <li><strong>No biometric data</strong> — fingerprint and Face ID authentication is performed entirely by your device's operating system. The App never sees, receives or stores your fingerprint or face data.</li>
+  <li><strong>No contacts, location, microphone or background location data</strong> — the App does not access these at all.</li>
+  <li><strong>No financial account credentials</strong> — the App never connects to your bank or mobile financial services accounts; balances are only what you record.</li>
+</ul>
+</section>
+
+<section>
+<h2>3. How We Use Information</h2>
+<p>We use the information described above strictly to provide and operate the App:</p>
+<ul>
+  <li>To create and authenticate your account, and let you sign in with email/password, Google, Microsoft, Apple or device biometrics.</li>
+  <li>To verify your email address and deliver OTP codes for registration, password reset and account deletion.</li>
+  <li>To store your personal finance records — locally on your device, and in the cloud only when cloud features are active for your plan.</li>
+  <li>To compute on-device statistics: balances, category breakdowns, credit/debit statistics, budget progress and loan overviews.</li>
+  <li>To run recurring payment schedules, reminders and local due-date notifications you configured.</li>
+  <li>To sync your records securely across your own devices when you use a Cloud plan or trial.</li>
+  <li>To enable import/export (CSV, Excel, JSON) and share-sheet features you initiate.</li>
+  <li>To manage your subscription tier purchased via Google Play.</li>
+  <li>To provide optional, opt-in AI-powered receipt and note features (see Section 7).</li>
+</ul>
+<p>We do not use your data to train machine-learning models for ourselves, to profile you, or for any secondary commercial purpose.</p>
+</section>
+
+<section>
+<h2>4. App Permissions</h2>
+<table>
+<tr><th>Permission</th><th>When &amp; why</th></tr>
+<tr><td>Internet</td><td>Required for account sign-in/sign-up, email verification and OTP, optional cloud sync, backup and subscription features. All of the App's core income and expense management also works offline.</td></tr>
+<tr><td>Biometric (Fingerprint / Face ID)</td><td>Only to unlock the App faster with the app lock you enable. Handled by the operating system; no biometric data leaves your device.</td></tr>
+<tr><td>Notifications</td><td>Only to show local due, upcoming, reminder and budget alerts you configured. These come from your device — not from our servers.</td></tr>
+<tr><td>Camera</td><td>Only when you use receipt scanning or take a photo for your records. Nothing is transmitted unless you specifically enable the AI receipt feature (Section 7).</td></tr>
+<tr><td>Photo library</td><td>Only when you attach a receipt image or profile photo, or import a backup file.</td></tr>
+<tr><td>Device storage</td><td>Only to save or read export/backup files (CSV, Excel, JSON, database) that you create or import, and for automatic local backups.</td></tr>
+<tr><td>Billing</td><td>Used exclusively by Google Play Billing to process Premium and Cloud plan purchases.</td></tr>
+<tr><td>Vibrate</td><td>Subtle haptic feedback for in-app interactions.</td></tr>
+</table>
+<p>You can revoke any permission at any time in your device settings; the corresponding feature will simply stop working.</p>
+</section>
+
+<section>
+<h2>5. Local-First Storage — What Stays on Your Device</h2>
+<p>Qist Finance stores everything you record in a local database on your device. The following items exist <strong>only on your device</strong> and are never uploaded by the App:</p>
+<ul>
+  <li>Your entire personal finance and notes database (default storage for all plans).</li>
+  <li>Receipt scan images attached to transactions.</li>
+  <li>Entity/stakeholder photos stored locally.</li>
+  <li>Your app-lock PIN (stored only as a one-way SHA-256 hash).</li>
+  <li>Translation dictionary cache and your UI preferences (theme, language, currency).</li>
+</ul>
+<p>Stakeholder names, phone numbers or addresses you record about third parties remain on your device in the same way; they reach the cloud only when you use a Cloud plan that syncs project ledgers.</p>
+</section>
+
+<section>
+<h2>6. Optional Cloud Features and Third-Party Services</h2>
+<p>We deliberately use a small number of providers. Data is shared with them only as described here.</p>
+
+<table>
+<tr><th>Service</th><th>What it does</th><th>Data involved</th></tr>
+<tr>
+  <td>Firebase Authentication (Google)</td>
+  <td>Account sign-up and sign-in, email verification, password reset, social sign-in.</td>
+  <td>Email, password (authentication only), display name, profile photo URL, provider identifiers.</td>
+</tr>
+<tr>
+  <td>Cloud Firestore (Google)</td>
+  <td>Stores your cloud-synced records. Access is protected by security rules that restrict every document to its authenticated owner only.</td>
+  <td>Your profile and the financial records listed in Section 2.2. <strong>Sent only for users on a Cloud plan or active trial;</strong> the Cloud database can be disabled in settings at any time.</td>
+</tr>
+<tr>
+  <td>Firebase Storage (Google)</td>
+  <td>Stores profile photos and entity photos when cloud features are enabled.</td>
+  <td>Profile and entity images you choose to upload.</td>
+</tr>
+<tr>
+  <td>Firebase Cloud Functions &amp; Transactional Email (Google)</td>
+  <td>Sends verification, password-reset and account-deletion OTP codes; processes password reset requests.</td>
+  <td>Your email address and the generated one-time code. The mail queue is write-only and cannot be read back by the App.</td>
+</tr>
+<tr>
+  <td>Google Sign-In</td>
+  <td>Optional "Continue with Google" authentication.</td>
+  <td>Your Google account email, name, profile photo and phone number (used to fill your profile on first sign-in). The same trusted session is reused for the Google Drive backup described below.</td>
+</tr>
+<tr>
+  <td>Google Drive (app-data folder)</td>
+  <td><strong>Opt-in</strong> scheduled or manual cloud backup for Premium/Cloud users. Data goes to a hidden app folder in <em>your own</em> Google Drive that only this App can access — we cannot see its contents directly and other Google services don't show it to you.</td>
+  <td>A backup of your database, a full data export, and your receipt/attachment images and photos. Backup frequency is yours to configure.</td>
+</tr>
+<tr>
+  <td>Google ML Kit (on-device)</td>
+  <td>Receipt text recognition (OCR) and UI translation. Runs <strong>entirely on your device</strong>; language models are downloaded once from Google. No image or text from your records is transmitted for this purpose.</td>
+  <td>Nothing leaves your device.</td>
+</tr>
+<tr>
+  <td>Google Play Billing</td>
+  <td>Processing one-time (Premium) and subscription (Cloud) purchases.</td>
+  <td>Purchase tokens (kept on your device) and your subscription tier, stored on our servers with your profile. Payment details are handled solely by Google Play.</td>
+</tr>
+</table>
+
+<h3>6.1 Support-related emails</h3>
+<p>If you use the in-app "Email to Developer" button or similar contact features, the App opens your email application; you send the message yourself.</p>
+
+<h3>6.2 Web</h3>
+<p>Opening any external link (Privacy Policy, Terms, Play Store page) launches your browser. Qist Finance does not pass your financial data to websites.</p>
+</section>
+
+<section>
+<h2>7. Optional AI Features (Your Choice)</h2>
+<p>Qist Finance offers optional AI helpers powered by the Google Gemini API, which use <strong>an API key that you supply yourself</strong> from Google AI Studio. We ship no default key, and these features are strictly opt-in:</p>
+<ul>
+  <li><strong>AI receipt parsing</strong> — if AI receipt mode is on, a receipt photo you scan is sent to the Gemini API to extract merchant, items, amounts, tax and category. Without your API key (or when AI fails), the App silently falls back to the fully on-device ML Kit recognizer.</li>
+  <li><strong>Note AI</strong> — if enabled, the text of a note you submit (title, content, checklist) is sent to the Gemini API to structure it into tasks or produce a summary.</li>
+</ul>
+<div class="note">
+<p><strong>Important:</strong> when you enable these features, the receipt image or note text you submit is processed by Google under Google's Generative AI terms. Do not enable AI features if you are not comfortable with this. The rest of your financial data is never sent to the Gemini API.</p>
+</div>
+<p>You can revoke or delete your API key at any time, at which point all AI features revert to on-device processing.</p>
+</section>
+
+<section>
+<h2>8. How Long We Keep Your Data</h2>
+<ul>
+  <li><strong>Local data</strong> — kept on your device until you delete records or uninstall/remove the App.</li>
+  <li><strong>Cloud data</strong> — kept while your account and cloud features are active; deleted when you delete your account (Section 10) or when you delete individual records.</li>
+  <li><strong>OTP verification documents</strong> — temporary one-time-password records expire within minutes (typically 10–30) and are deleted after use or expiry.</li>
+  <li><strong>Google Drive backups</strong> — remain in your own Drive app folder until you turn off backups or delete them (they are also deleted via Section 10 guidance).</li>
+</ul>
+</section>
+
+<section>
+<h2>9. Data Security</h2>
+<ul>
+  <li>Data sent to our cloud services travels over encrypted (HTTPS/TLS) connections operated by Google Cloud.</li>
+  <li>Your login password is stored and verified only by Firebase Authentication. It is never placed in our application database or in local files.</li>
+  <li>Your app-lock PIN is stored on your device only as a SHA-256 hash — we do not keep — and cannot recover — your PIN.</li>
+  <li>Firestore security rules restrict every cloud record to the authenticated account owner; bulk data access is blocked.</li>
+  <li>OTP verification flows are rate-limited and expire quickly to prevent abuse.</li>
+  <li>Because your main database lives on your device, we recommend you also use device-level protection (screen lock) and the built-in App Lock (PIN/biometric) feature.</li>
+</ul>
+<p>No method of transmission or storage is 100% secure, and we cannot guarantee absolute security; however, we carefully limit the data that ever leaves your device in the first place.</p>
+</section>
+
+<section>
+<h2>10. Account Deletion and Your Rights</h2>
+<h3>10.1 How to delete your account</h3>
+<p>You can permanently delete your account <strong>from inside the App</strong> (Settings → Delete Account). For security we email you a one-time code to confirm. When deletion completes we:</p>
+<ul>
+  <li>Erase all local data on the device — the database, photos and saved credentials.</li>
+  <li>Delete your profile, accounts, transactions, loans, payments, budgets, categories, cost heads, stakeholders, recurring rules, notes and settings records from our cloud database.</li>
+  <li>Delete your Firebase Authentication account, so it can no longer be used to sign in.</li>
+</ul>
+<h3>10.2 Google Drive backups and remaining files</h3>
+<p>Backups the App previously wrote to <em>your own</em> Google Drive app-data folder cannot be deleted by the App from this screen. To remove them, open Google Drive → Settings → Manage Apps → Qist Finance → <em>Delete hidden app data</em> (or uninstall the App's access), and the stored backups and uploads are removed from your Drive.</p>
+<h3>10.3 Other rights</h3>
+<p>Depending on your jurisdiction (for example under GDPR, CCPA or other local laws) you may have rights to access, correct, export, restrict or erase your personal data. Because the App is offline-first, most of your data is directly under your control on your device at all times, and you can export everything at any time using the built-in CSV/Excel/JSON export. For anything cloud-related, contact us using the details in Section 14 and we will help you within the legally required timeframe.</p>
+<h3>10.4 Cookies and similar technologies</h3>
+<p>The App itself does not use advertising or tracking cookies. The privacy/terms web pages are plain static pages that do not set tracking cookies.</p>
+</section>
+
+<section>
+<h2>11. Children's Privacy</h2>
+<p>Qist Finance is a general-audience personal finance and note management tool and is <strong>not directed to children under the age of 13</strong> (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has created an account, contact us and we will delete it.</p>
+</section>
+
+<section>
+<h2>12. International Data Transfers</h2>
+<p>Cloud services used by the App (Firebase, Google Drive, Google Play) are operated by Google and may process data in the United States and other countries. When you use cloud features, transfers to Google are governed by Google's own privacy framework and applicable legal safeguards. All core income, expense and note management can be used fully offline with no international transfer at all.</p>
+</section>
+
+<section>
+<h2>13. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy as the App evolves. Material changes will be reflected by the "Last updated" date at the top, and where practical we will also notify you inside the App. Continued use after an update constitutes acceptance of the revised policy.</p>
+</section>
+
+<section>
+<h2>14. Contact Us</h2>
+<p>Questions, requests or complaints about this Privacy Policy or your data:</p>
+<p><strong>Qist Finance — Developer</strong><br>
+Email: <a href="mailto:quantrixglobal@gmail.com?subject=QistFinance%20Privacy">quantrixglobal@gmail.com</a><br>
+Alternatively, use the "Email to Developer" option inside the App.</p>
+</section>
+
+
+</div>
+</body>
+</html>
