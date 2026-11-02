@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Center</title>
+<meta name="description" content="Help Center — a complete step-by-step user guide for the personal finance, expense, income and note management app, including loans, budgets, backups and account setup.">
+<style>
+  :root{
+    --glass:rgba(255,255,255,.72); --glass-strong:rgba(255,255,255,.85);
+    --ink:#1E2534; --body:#3E4759; --muted:#6B7386;
+    --accent:#0284C7; --accent-2:#7C3AED; --accent-soft:rgba(2,132,199,.09);
+    --line:rgba(30,58,96,.14); --heading:#263150;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+       background:#EAF1F8 linear-gradient(150deg,#F3F7FC 0%,#E8EFF9 34%,#EEEBF7 66%,#F6F0F7 100%) fixed;
+       color:var(--ink);line-height:1.72;font-size:16px;min-height:100vh}
+  .page{max-width:790px;margin:0 auto;padding:54px 22px 80px}
+  header{position:relative;background:linear-gradient(120deg,#0E2A47 0%,#153E70 48%,#3B2270 100%);
+         color:#fff;border-radius:26px;padding:40px 38px 36px;margin-bottom:44px;text-align:center;overflow:hidden;
+         box-shadow:0 18px 44px rgba(14,42,71,.35)}
+  header::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-120px;bottom:-190px;
+         background:radial-gradient(circle,rgba(2,132,199,.35),transparent 68%)}
+  header::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-90px;top:-140px;
+         background:radial-gradient(circle,rgba(124,58,237,.4),transparent 68%)}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);
+        border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 15px;font-size:.74rem;
+        font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#BDE3FA;backdrop-filter:blur(8px)}
+  .chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#7DD3FC;
+        box-shadow:0 0 9px rgba(125,211,252,.9)}
+  header .kicker{display:block;margin-bottom:14px}
+  header h1{position:relative;font-size:2.35rem;font-weight:850;letter-spacing:-.035em;line-height:1.1;color:#fff}
+  header p.sub{position:relative;margin:10px auto 0;max-width:560px;font-size:.92rem;color:#C7D5E8}
+  header .meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px;position:relative}
+  header .meta .chip{color:#E4D9FB;background:rgba(255,255,255,.09);letter-spacing:.03em;text-transform:none}
+  section{background:var(--glass);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:30px 32px;
+          margin-bottom:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+          box-shadow:0 10px 34px rgba(30,58,96,.08)}
+  h2{font-size:1.3rem;font-weight:800;margin:0 0 15px;letter-spacing:-.02em;color:#182033;
+     padding-bottom:12px;border-bottom:1px solid var(--line)}
+  h3{font-size:.99rem;font-weight:700;margin:24px 0 8px;color:var(--heading)}
+  p{margin:11px 0;color:var(--body)}
+  strong{color:var(--ink)}
+  ul,ol{margin:10px 0 10px 24px}
+  li{margin:8px 0;color:var(--body)}
+  li::marker{color:var(--accent-2)}
+  ol.steps{margin-left:30px}
+  ol.steps li{margin:11px 0;padding-left:2px}
+  ol.steps li::marker{color:var(--accent);font-weight:800}
+  ol.steps li b.step{color:var(--heading)}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;font-size:.9rem;
+        border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th,td{padding:12px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:rgba(2,132,199,.08);color:#1B6FA3;font-weight:800;font-size:.76rem;
+     letter-spacing:.08em;text-transform:uppercase}
+  td{background:rgba(255,255,255,.65)}
+  tr:nth-child(even) td{background:#F3F7FC}
+  tr:last-child td{border-bottom:none}
+  .note{background:linear-gradient(135deg,#EAF6FE,#F1EDFC);border:1px solid rgba(2,132,199,.2);
+        border-left:4px solid var(--accent);border-radius:14px;padding:16px 20px;margin:18px 0}
+  .note p{margin:4px 0;color:#2B3A55}
+  code{background:rgba(30,58,96,.07);border-radius:7px;padding:2px 8px;font-size:.86em;color:#2A4A66}
+  a{color:var(--accent);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(2,132,199,.35)}
+  a:hover{color:var(--accent-2);border-bottom-color:var(--accent-2)}
+  nav.toc{background:var(--glass);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:24px 28px;
+          margin-bottom:24px;backdrop-filter:blur(14px);box-shadow:0 10px 34px rgba(30,58,96,.08)}
+  nav.toc h2{border:none;padding:0;margin:0 0 10px;font-size:1.05rem}
+  nav.toc ol{columns:2;column-gap:34px;margin-left:22px}
+  nav.toc li{break-inside:avoid}
+  .path{display:inline-block;background:#FFFFFF;border:1px solid var(--line);border-radius:9px;
+        padding:3px 11px;font-size:.83rem;font-weight:700;color:var(--heading);box-shadow:0 1px 4px rgba(30,58,96,.07)}
+  @media (max-width:600px){
+    .page{padding:30px 14px 56px}
+    header{padding:30px 20px;border-radius:20px}
+    header h1{font-size:1.7rem}
+    section{padding:22px 16px;border-radius:16px}
+    table{font-size:.79rem}
+    th,td{padding:9px 10px}
+    th{font-size:.68rem}
+    nav.toc ol{columns:1}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <span class="kicker"><span class="chip">Help Center</span></span>
+  <h1>Step-by-Step User Guide</h1>
+  <p class="sub">Everything you need to set up, use and get the most out of the app — from your first account to backups and account deletion.</p>
+  <div class="meta">
+    <span class="chip">Last updated: November 2, 2026</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>On this page</h2>
+  <ol>
+    <li><a href="#start">Getting Started</a></li>
+    <li><a href="#tour">First Look &amp; Dashboard</a></li>
+    <li><a href="#accounts">Accounts &amp; Wallets</a></li>
+    <li><a href="#transactions">Recording Transactions</a></li>
+    <li><a href="#receipts">Receipt Scanning (OCR)</a></li>
+    <li><a href="#loans">Loans &amp; Loan Payments</a></li>
+    <li><a href="#recurrent">Recurring Payments</a></li>
+    <li><a href="#budgets">Budgets &amp; Cost Heads</a></li>
+    <li><a href="#stakeholders">Stakeholders &amp; Projects</a></li>
+    <li><a href="#notes">Notes &amp; Tasks</a></li>
+    <li><a href="#stats">Statistics &amp; Filters</a></li>
+    <li><a href="#import-export">Import &amp; Export</a></li>
+    <li><a href="#cloud">Cloud Sync &amp; Google Drive Backup</a></li>
+    <li><a href="#security">Security, Lock &amp; 2FA</a></li>
+    <li><a href="#notifications">Reminders &amp; Notifications</a></li>
+    <li><a href="#plans">Plans &amp; Subscriptions</a></li>
+    <li><a href="#profile">Profile &amp; Account Settings</a></li>
+    <li><a href="#troubleshoot">Troubleshooting &amp; FAQ</a></li>
+  </ol>
+</nav>
+
+<section id="start">
+<h2>1. Getting Started</h2>
+<h3>Create your account</h3>
+<ol class="steps">
+  <li><b>1.</b> Install the app from the app store and open it. The intro screen explains what the app does.</li>
+  <li><b>2.</b> Choose <strong>Sign Up</strong> and fill in: <strong>Full Name, Username, Email, Mobile Number</strong> and a password.</li>
+  <li><b>3.</b> A <strong>6-digit OTP code</strong> is emailed to you. Enter it to verify your email.</li>
+  <li><b>4.</b> Open the verification email or reset link sent to you if prompted.</li>
+</ol>
+<h3>Complete your profile</h3>
+<ol class="steps">
+  <li><b>1.</b> After verification you'll be asked to complete your profile (optional): mobile number, residential/business address and a profile photo.</li>
+  <li><b>2.</b> Tap <strong>Continue</strong> when done — you can skip any item and add it later.</li>
+</ol>
+<h3>Initial security setup</h3>
+<ol class="steps">
+  <li><b>1.</b> Set up your <strong>App Lock</strong>: create a PIN and/or enable fingerprint / Face ID unlock.</li>
+  <li><b>2.</b> Optionally add a second layer with an authenticator app (TOTP) by scanning the QR code shown in setup.</li>
+  <li><b>3.</b> Save the <strong>emergency recovery passkeys</strong> shown at the end of setup — keep them somewhere safe outside the device.</li>
+</ol>
+<div class="note">
+  <p><strong>Remember:</strong> if you lock yourself out, PIN and password cannot be recovered by anyone — that's by design. Recovery passkeys are the only way back in, so store them safely.</p>
+</div>
+</section>
+
+<section id="tour">
+<h2>2. First Look &amp; Dashboard</h2>
+<p>The <strong>Dashboard</strong> is your home. It shows an overview of everything at a glance:</p>
+<ul>
+  <li><strong>Balance card</strong> — total balance across your enabled accounts, with income vs. expense statistics.</li>
+  <li><strong>Wallet accounts</strong> — stacked cards of your accounts.</li>
+  <li><strong>Recent transactions</strong> — the latest ledger entries.</li>
+  <li><strong>Loan quick view</strong> — amounts you lent out or borrowed.</li>
+  <li><strong>Project / entity overview</strong> - totals due for your projects and stakeholders.</li>
+  <li><strong>Category breakdown &amp; budgets</strong> — where your money goes and progress on limits.</li>
+  <li><strong>Recurring calendar</strong> — upcoming scheduled payments.</li>
+</ul>
+<p>Use the <strong>floating grid menu</strong> (or the bottom bar) to reach every feature. A <strong>guided tour</strong> highlights each part of the screen the first time you open the dashboard — you can replay it anytime from settings.</p>
+</section>
+
+<section id="accounts">
+<h2>3. Accounts &amp; Wallets</h2>
+<h3>Create your first account</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Accounts</span> (Account Manager) from the menu.</li>
+  <li><b>2.</b> Tap <strong>+ Add</strong> and pick a type: <strong>Bank, Cash, Mobile Financial Services (mfs), Savings, Investments</strong> or <strong>Others</strong>.</li>
+  <li><b>3.</b> Enter a name, the account number (optional — only stored for your records), the <strong>initial balance</strong> and currency.</li>
+  <li><b>4.</b> Personalise the card: choose a colour and icon, then save.</li>
+  <li><b>5.</b> Disable an account's toggle if you want it excluded from the total balance.</li>
+</ol>
+<div class="note">
+  <p>Accounts never connect to your bank — balances represent only what you enter or record. Everything syncs back to the ledger automatically when you record transactions.</p>
+</div>
+</section>
+
+<section id="transactions">
+<h2>4. Recording Transactions</h2>
+<h3>Add an income, expense or transfer</h3>
+<ol class="steps">
+  <li><b>1.</b> Tap the <strong>+ Add</strong> button (usually in the transactions tab or dashboard).</li>
+  <li><b>2.</b> Pick the type: <strong>Credit</strong> (income), <strong>Debit</strong> (expense) or <strong>Transfer</strong> (between your own accounts).</li>
+  <li><b>3.</b> Enter the amount. Tip: open the built-in <strong>calculator</strong> for quick math with the result filled in.</li>
+  <li><b>4.</b> Choose the <strong>source account</strong> (and destination account for transfers).</li>
+  <li><b>5.</b> Assign a <strong>category</strong> (e.g. Food, Transport) — create your own custom categories from the category manager.</li>
+  <li><b>6.</b> Optionally add a stakeholder (who it's for), a project/cost head, tags, and a description or note.</li>
+  <li><b>7.</b> Optionally attach a <strong>receipt photo</strong> — see the next section for scanning.</li>
+  <li><b>8.</b> Save. The account balance and all dashboard statistics update instantly.</li>
+</ol>
+<h3>Editing and organising</h3>
+<ul>
+  <li>Open the <strong>Ledger</strong> to see all records, grouped by month, with search.</li>
+  <li>Use <strong>custom filters</strong> (date range, account, category, type, amount range, tags) to build a precise list.</li>
+  <li>Deleting a transfer deletes both legs together safely.</li>
+</ul>
+</section>
+
+<section id="receipts">
+<h2>5. Receipt Scanning (OCR)</h2>
+<ol class="steps">
+  <li><b>1.</b> In the new transaction screen, tap <strong>Scan Receipt</strong>.</li>
+  <li><b>2.</b> Take a photo of the receipt or pick one from your gallery.</li>
+  <li><b>3.</b> The app reads the receipt <strong>on your device</strong> and fills in merchant, date, line items, subtotal, VAT/tax, grand total and suggests a category and payment method (e.g. cash, card, mobile financial services).</li>
+  <li><b>4.</b> Check the details, adjust anything, then save the transaction.</li>
+</ol>
+<h3>Optional: AI-powered scanning</h3>
+<ol class="steps">
+  <li><b>1.</b> Go to settings and paste your own <strong>Gemini API key</strong> (free from Google AI Studio).</li>
+  <li><b>2.</b> Now receipt photos can be parsed with AI for a more precise reading.</li>
+</ol>
+<div class="note">
+  <p><strong>Privacy:</strong> standard scanning runs fully on-device and sends nothing anywhere. AI scanning sends the receipt image to Google's AI service — only if you enable it yourself.</p>
+</div>
+</section>
+
+<section id="loans">
+<h2>6. Loans &amp; Loan Payments</h2>
+<p>Use the loans screen to record and manage loan information — money you lent out or money you borrowed.</p>
+<h3>Create a loan</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Loans</span> and tap <strong>+ New Loan</strong>.</li>
+  <li><b>2.</b> Choose who: a person/entity name, or a saved stakeholder.</li>
+  <li><b>3.</b> Choose the direction: <strong>I lent</strong> or <strong>Borrowed</strong>.</li>
+  <li><b>4.</b> Enter the <strong>principal amount</strong>, date, <strong>interest rate</strong>, interest amount, duration in months, settlement date, and the source account.</li>
+  <li><b>5.</b> Save. The current balance is calculated automatically and appears on the dashboard loan view.</li>
+</ol>
+<h3>Record payments</h3>
+<ol class="steps">
+  <li><b>1.</b> Open the loan's details and tap <strong>Add Payment</strong>.</li>
+  <li><b>2.</b> Enter the amount, date and note. Payments you receive (on lent money) reduce what's owed to you; payments you make (on borrowed money) reduce what you owe.</li>
+  <li><b>3.</b> Mark the loan <strong>settled</strong> when everything is repaid.</li>
+</ol>
+<h3>Handy tools</h3>
+<ul>
+  <li><strong>Interest calculator</strong> — model interest for simple/compound scenarios before recording anything.</li>
+  <li>Deleting a loan requires a confirmation and removes its payment history with it.</li>
+</ul>
+<div class="note">
+  <p>Loans here are <strong>information records</strong> — the app holds money nowhere and gives no financial advice.</p>
+</div>
+</section>
+
+<section id="recurrent">
+<h2>7. Recurring Payments</h2>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Recurring</span> and tap <strong>+ New</strong>.</li>
+  <li><b>2.</b> Set the type (income/expense/transfer), amount and the accounts involved.</li>
+  <li><b>3.</b> Pick a frequency: daily, weekly, monthly, quarterly, yearly — or <strong>custom days</strong> and pick exact dates.</li>
+  <li><b>4.</b> Set start/end dates and choose:
+    <ul>
+      <li><strong>Auto-execute</strong> — create the transaction automatically when due,</li>
+      <li><strong>Notify</strong> — remind you with a notification instead.</li>
+    </ul>
+  </li>
+  <li><b>5.</b> Save. Pause or edit any rule anytime; due items appear in a dashboard calendar card.</li>
+</ol>
+</section>
+
+<section id="budgets">
+<h2>8. Budgets &amp; Cost Heads</h2>
+<h3>Set a budget</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Budgets</span> and tap <strong>+ New</strong>.</li>
+  <li><b>2.</b> Choose a category, name the budget, set a spending limit, and set a start and end date.</li>
+  <li><b>3.</b> Save. Progress bars on the dashboard show how spent amount tracks against each limit.</li>
+</ol>
+<h3>Cost heads</h3>
+<p>Create <strong>cost heads</strong> (project or department tags) from the menu, then assign them to transactions to keep group spending separate — useful for a business trip, a home renovation or any sub-project. Project ledgers show totals per cost head.</p>
+</section>
+
+<section id="stakeholders">
+<h2>9. Stakeholders &amp; Projects</h2>
+<h3>Add a stakeholder (person or entity)</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Entities</span> (stakeholders) and tap <strong>+ Add</strong>.</li>
+  <li><b>2.</b> Enter a name and any of: phone, email, address, description and a photo.</li>
+  <li><b>3.</b> Save. Assign this stakeholder to transactions, loans or projects; the app totals their amount due automatically and shows an entity ledger per person.</li>
+</ol>
+<h3>Projects</h3>
+<p>Create a project, optionally link a stakeholder and cost heads, and record project-related transactions twice through: project ledger for the group view, main ledger for the books.</p>
+</section>
+
+<section id="notes">
+<h2>10. Notes &amp; Tasks</h2>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Notes</span> and tap <strong>+ New Note</strong>.</li>
+  <li><b>2.</b> Write a title and content; use <strong>checklist items</strong> for to-dos with completion checkboxes.</li>
+  <li><b>3.</b> Set a <strong>reminder</strong> date-time if you want a notification; choose repeat options (never, daily, weekly, custom days…).</li>
+  <li><b>4.</b> Colour-code, pin important notes, and archive finished ones.</li>
+</ol>
+<h3>Optional AI assist</h3>
+<p>If you've set your own Gemini API key (Section 5), you can let AI structure quick voice-of-thought notes into clean tasks or summarise long notes — sent to the AI service only when you ask for it.</p>
+</section>
+
+<section id="stats">
+<h2>11. Statistics &amp; Filters</h2>
+<ul>
+  <li>Open the <strong>Statistics tab</strong> for charts: category breakdown, income vs. expense trends, and monthly comparisons.</li>
+  <li>Dashboard cards summarise balance, statement balance, credit/debit statistics, loan overview, project overview and budget progress.</li>
+  <li>In the ledger, combine <strong>custom filters</strong> to answer specific questions — e.g. "cash expenses above 1000 in the last 60 days".</li>
+  <li>Search recent entries fast with the search bar; recent searches are remembered locally for convenience.</li>
+</ul>
+</section>
+
+<section id="import-export">
+<h2>12. Import &amp; Export</h2>
+<h3>Export your data</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Settings → Backup &amp; Restore</span>.</li>
+  <li><b>2.</b> Choose an export format: <strong>CSV</strong>, a multi-sheet <strong>Excel file</strong> (Ledger, Loans, Projects, Accounts, Categories, Budgets, Notes…), or a full <strong>JSON</strong> backup. A raw database file export is also available.</li>
+  <li><b>3.</b> Save it to your device or share it via the system share sheet (e.g. email it to yourself).</li>
+</ol>
+<h3>Import / restore</h3>
+<ol class="steps">
+  <li><b>1.</b> Pick a backup file (CSV / Excel / JSON / database) from the same screen.</li>
+  <li><b>2.</b> Review the <strong>import preview</strong> — it shows exactly which sheets, categories and records will be created.</li>
+  <li><b>3.</b> Confirm. You can also download a <strong>sample import template</strong> to prepare data from other apps.</li>
+</ol>
+<div class="note">
+  <p>Make regular exports — your records live on your device, and exports are your portable safety net.</p>
+</div>
+</section>
+
+<section id="cloud">
+<h2>13. Cloud Sync &amp; Google Drive Backup</h2>
+<h3>Google Drive backup (Premium &amp; Cloud plans)</h3>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Settings → Cloud Backup</span> and connect your Google account.</li>
+  <li><b>2.</b> Choose a schedule: <strong>Daily, Weekly or Monthly</strong> — or run a manual backup.</li>
+  <li><b>3.</b> The backup goes to a <strong>hidden app folder in your own Google Drive</strong> (database, full export, plus receipt/entity photos). Only this app can read it.</li>
+  <li><b>4.</b> To move to a new phone, install the app, sign in, and choose <strong>Restore</strong> from the same screen.</li>
+  <li><b>5.</b> To delete those backup files, open Google Drive → Settings → Manage Apps → the app → <em>Delete hidden app data</em>.</li>
+</ol>
+<h3>Cloud sync (Cloud plan)</h3>
+<ol class="steps">
+  <li><b>1.</b> With an active Cloud subscription (or trial), cloud sync is available and updates your records across your own devices.</li>
+  <li><b>2.</b> You can switch the cloud database on or off in settings at any time — the app stays fully usable offline either way.</li>
+</ol>
+</section>
+
+<section id="security">
+<h2>14. Security, Lock &amp; 2FA</h2>
+<ul>
+  <li><strong>App Lock:</strong> require your PIN or biometrics (fingerprint/Face ID) when opening the app; auto-lock engages after inactivity.</li>
+  <li><strong>Change PIN:</strong> settings → security. The PIN is stored only as a hash — nobody can read it, including us.</li>
+  <li><strong>Biometrics:</strong> handled entirely by your device's operating system. Use your device credentials as fallback when biometrics fail.</li>
+  <li><strong>Two-factor authentication (TOTP):</strong> link an authenticator app (Google Authenticator etc.) to your account. On a new device you'll need the rotating 6-digit code alongside your password.</li>
+  <li><strong>Emergency recovery passkeys:</strong> long codes generated during initial setup. Each is one-time use; regenerate anytime from the security screen but note old ones become invalid.</li>
+  <li><strong>Password reset:</strong> "Forgot password" sends a one-time code to your verified email, then lets you set a new password.</li>
+</ul>
+</section>
+
+<section id="notifications">
+<h2>15. Reminders &amp; Notifications</h2>
+<ul>
+  <li>Notifications are generated <strong>locally on your device</strong> — due payments, upcoming items, note reminders, budget alerts and loan due dates. We run no push-notification service and send nothing to your device from our servers.</li>
+  <li>If you see no notifications, check that <strong>notifications permission</strong> is granted for the app in system settings, and that battery optimisation isn't killing it.</li>
+  <li>The <strong>notification log</strong> (bell icon) keeps a history of recent alerts and reminders in-app.</li>
+  <li>You can silence or reshelve each alert type from settings without losing the underlying records.</li>
+</ul>
+</section>
+
+<section id="plans">
+<h2>16. Plans &amp; Subscriptions</h2>
+<table>
+  <tr><th>Plan</th><th>Price model</th><th>Unlocks</th></tr>
+  <tr><td><strong>Free</strong></td><td>No charge</td><td>Core tracking: accounts, income/expense/transfer, loans, categories, budgets, notes, local statistics.</td></tr>
+  <tr><td><strong>Premium (Offline Pro)</strong></td><td>One-time purchase</td><td>Everything in Free plus offline-boost features like unlimited-scale database and <strong>Google Drive backup</strong>.</td></tr>
+  <tr><td><strong>Cloud</strong></td><td>Monthly subscription (3-day free trial)</td><td>Everything in Premium plus multi-device cloud sync.</td></tr>
+</table>
+<ol class="steps">
+  <li><b>1.</b> Open <span class="path">Settings → Plans</span> to see current status and prices in your currency from the store.</li>
+  <li><b>2.</b> Tap a plan to subscribe via Google Play. The trial converts to a paid subscription unless cancelled first.</li>
+  <li><b>3.</b> Manage or cancel in <strong>Google Play → Subscriptions</strong>; benefits for the paid period remain active until it ends.</li>
+</ol>
+</section>
+
+<section id="profile">
+<h2>17. Profile &amp; Account Settings</h2>
+<ul>
+  <li><strong>Update profile:</strong> edit your name, mobile number, address or photo from the profile screen (device photo picks never upload until you choose to).</li>
+  <li><strong>Username:</strong> reserved at sign-up and shown in your profile; it's how friends could find you if you ever share records.</li>
+  <li><strong>Change password:</strong> settings → account → change password (confirm with your current one).</li>
+  <li><strong>Language &amp; currency:</strong> choose from settings; the interface supports many languages with full English and Bengali dictionaries; per-item translations happen on-device.</li>
+  <li><strong>Theme, text size &amp; icons:</strong> light/dark mode, dynamic text scaling and an optional custom app icon.</li>
+  <li><strong>Delete account:</strong> settings → account → Delete Account. A one-time code is emailed to confirm. This removes local data on the device, your cloud records and your sign-in account. Google Drive backups must be removed manually via Google Drive settings.</li>
+</ul>
+</section>
+
+<section id="troubleshoot">
+<h2>18. Troubleshooting &amp; FAQ</h2>
+<h3>Common fixes</h3>
+<table>
+  <tr><th>Problem</th><th>Solution</th></tr>
+  <tr><td>OTP email not received</td><td>Check spam folder; tap resend; confirm the email address; wait a minute between resends (limit if too many requests).</td></tr>
+  <tr><td>Locked out (PIN/biometrics failed)</td><td>Use an emergency recovery passkey, or your authenticator 2FA code, or reset via "Forgot password".</td></tr>
+  <tr><td>Cloud sync not running</td><td>Verify an active Cloud plan/trial, then check that the cloud database toggle in settings is ON, and sign in again.</td></tr>
+  <tr><td>Google Drive backup failed</td><td>Google sign-in must be active; check account storage; try a manual backup once to re-authorise.</td></tr>
+  <tr><td>Balance looks wrong</td><td>Check for duplicate transactions in the ledger and account's initial balance; disabled accounts don't count to the total.</td></tr>
+  <tr><td>Receipt scan misread</td><td>Retake with a flat, well-lit photo; correct line items manually before saving.</td></tr>
+  <tr><td>No notifications</td><td>Grant notification permission in system settings; disable battery optimisation for the app.</td></tr>
+  <tr><td>Switching to a new phone</td><td>On the old device export/Drive-backup; install, sign in on the new phone and restore from backup.</td></tr>
+</table>
+<h3>Frequently asked questions</h3>
+<ul>
+  <li><strong>Does the app hold or move my money?</strong> No — it's a records tool. All holdings stay in your real accounts.</li>
+  <li><strong>Is my financial data private?</strong> Yes. It lives in a local database on your device; nothing is uploaded unless you enable optional backup or a Cloud plan.</li>
+  <li><strong>Does it show ads?</strong> Never. No ads, no trackers, no analytics.</li>
+  <li><strong>What if I lose my phone?</strong> Your export/Drive backup restores data; without a backup, device-local records can't be recovered by anyone.</li>
+  <li><strong>Can I use multiple devices?</strong> Yes — with a Cloud plan, sign in on each device to keep them in step.</li>
+</ul>
+</section>
+
+<section>
+<h2>19. Still Stuck? Contact Us</h2>
+<p>Email: <a href="mailto:quantrixglobal@gmail.com?subject=Qist%20Finance%20Support">quantrixglobal@gmail.com</a> — or use the in-app "Email to Developer" button and include what were you doing when it broke, plus your plan if applicable.</p>
+<p>Related:
+<a href="https://qistfinance-378e4.web.app/privacy-policy.html">Privacy Policy</a> ·
+<a href="https://qistfinance-378e4.web.app/terms.html">Terms of Service</a></p>
+</section>
+
+</div>
+</body>
+</html>
